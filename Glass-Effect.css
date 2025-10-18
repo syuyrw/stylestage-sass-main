@@ -1,0 +1,42 @@
+.card {
+  position: absolute;
+  width: 220px;
+  min-height: 260px;
+  margin: 10px auto;
+  padding: 5px;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  border-radius: 10px;
+  backdrop-filter: blur(3px);
+  color: #fff;
+}
+
+
+/* Shine overlay */
+.card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 50%;
+  height: 100%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.4) 50%,
+    rgba(255, 255, 255, 0.2) 100%
+  );
+  transform: skewX(-20deg);
+  pointer-events: none;
+}
+
+.card:hover {
+  z-index: 5;
+  transform: scale(1.05);
+  backdrop-filter: blur(30px);
+}
+
+.card:hover::before {
+  animation: card-shine 1s forwards;
+}

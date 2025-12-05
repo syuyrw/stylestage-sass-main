@@ -122,6 +122,7 @@ body::before {
   inset: 0;
   z-index: -1;
   pointer-events: none;
+    transform: translateX(4%);
 
   background:
 
@@ -161,6 +162,15 @@ body::before {
     transparent 12px 26px
   ) no-repeat 78.5% 100% / 4% 44vh,
 
+  /* Far-left building windows */
+  repeating-linear-gradient(
+    to bottom,
+    var(--color-yellow) 0 6px,
+    var(--color-yellow) 6px 12px,
+    transparent 12px 26px
+  ) no-repeat 11.5% 100% / 3% 45vh,
+
+
   /* ============================================================
      BUILDINGS
   ============================================================ */
@@ -198,6 +208,14 @@ body::before {
   /* Far right block */
   linear-gradient(var(--color-black), var(--color-black))
     no-repeat 80% 100% / 9% 44vh,
+
+      /* Far-left building */
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 8% 100% / 8% 45vh,
+
+  /* Mid-right new building (between tower & right block) */
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 52% 100% / 7% 56vh,
 
   /* Ground */
   linear-gradient(

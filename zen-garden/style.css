@@ -1,0 +1,191 @@
+/* =======================================================
+Root Variables
+=========================================================== */
+:root {
+    /*Glass effect*/
+  --glassEffect-bg: rgba(255, 255, 255, 0.05);
+  --glassEffect-border: rgba(255, 255, 255, 0.3);
+  --glassEffect-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  --glassEffect-radius: 12px;
+ 
+
+  --glassEffect-shine-1: rgba(255, 255, 255, 0);
+  --glassEffect-shine-2: rgba(255, 255, 255, 0.35);
+  --glassEffect-shine-3: rgba(255, 255, 255, 0.15);
+  --glassEffect-shine-angle: -20deg;
+
+  /*Colors*/
+  --color-white: #FFFFFF;   
+  --color-black: #000000;   
+  --color-slate: #a47ab3;  
+  --color-yellow: #FFF949; 
+  --color-pink: #ff6ec;    
+--gradient: radial-gradient(
+  circle at bottom center,
+  #ffe289 0%,
+  #ff9b4a 5%,
+  #ff6ec7 15%,
+  #a47ab3 25%,
+  #422062 85%,
+  #1a1036 100%
+);
+}
+
+/* ==========================================================
+ Glass Background
+=============================================================== */
+
+.intro,
+.preamble,
+.summary,
+.main,
+.explanation,
+.participation,
+.benefits,
+.requirements,
+.sidebar,
+.design-selection,
+.design-archives,
+.zen-resources,
+.extra1,
+.extra2,
+.extra3,
+.extra4,
+.extra5,
+.extra6 {
+  
+  /*glass background */
+  background: var(--glassEffect-bg);
+
+  /* Subtle shine highlight */
+  background-image:
+    linear-gradient(
+      var(--glassEffect-shine-angle),
+      var(--glassEffect-shine-1) 0%,
+      var(--glassEffect-shine-2) 50%,
+      var(--glassEffect-shine-3) 100%
+    );
+
+  border: 1px solid var(--glassEffect-border);
+
+
+  box-shadow: var(--glassEffect-shadow);
+  border-radius: var(--glassEffect-radius);
+
+
+
+}
+.intro a,
+.preamble a,
+.summary a,
+.main a,
+.sidebar a {
+  color: #000;
+}
+
+
+/*==============================================================
+Draw City
+==============================================================*/
+body {
+  background-image: var(--gradient);
+  background-size: 100% 100vh;   
+  background-repeat: no-repeat;
+  background-attachment: fixed; 
+  margin: 0;
+  min-height: 100vh;
+}
+
+/* City silhouette using layered gradients */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+
+  background:
+
+  /* ============================================================
+     WINDOWS
+  ============================================================ */
+
+/* Left building windows*/
+  repeating-linear-gradient(
+    to bottom,
+    var(--color-yellow) 0 6px,
+    var(--color-yellow) 6px 12px,
+    transparent 12px 26px
+  ) no-repeat 18.5% 100% / 4% 50vh,
+
+  /* Center tower windows*/
+  repeating-linear-gradient(
+    to bottom,
+    var(--color-yellow) 0 6px,
+    var(--color-yellow) 6px 12px,
+    transparent 12px 26px
+  ) no-repeat 41% 100% / 5% 65vh,
+
+  /* Right mid building windows*/
+  repeating-linear-gradient(
+    to bottom,
+    var(--color-yellow) 0 6px,
+    var(--color-yellow) 6px 12px,
+    transparent 12px 26px
+  ) no-repeat 63.5% 100% / 4% 48vh,
+
+  /* Far right windows*/
+  repeating-linear-gradient(
+    to bottom,
+    var(--color-yellow) 0 6px,
+    var(--color-yellow) 6px 12px,
+    transparent 12px 26px
+  ) no-repeat 78.5% 100% / 4% 44vh,
+
+  
+
+  /* ============================================================
+     BUILDINGS
+  ============================================================ */
+
+  /* Left tall block */
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 16% 100% / 10% 54vh,
+
+  /* Slim block next to it */
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 28% 100% / 6% 46vh,
+
+  /* Center main tower */
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 40% 100% / 12% 70vh,
+
+  /* Tower tier steps */
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 40.5% calc(100% - 70vh) / 10% 4vh,
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 41% calc(100% - 74vh) / 8% 4vh,
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 41% calc(100% - 78vh) / 6% 4vh,
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 41.25% calc(100% - 82vh) / 4% 4vh,
+
+  /* Center spire */
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 41.5% calc(100% - 86vh) / 1% 15vh,
+
+  /* Right mid building */
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 64% 100% / 8% 50vh,
+
+  /* Far right block */
+  linear-gradient(var(--color-black), var(--color-black))
+    no-repeat 80% 100% / 9% 44vh,
+
+  /* Ground */
+  linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.18) 0 20vh,
+    transparent 10vh
+  );
+}

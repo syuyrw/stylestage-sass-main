@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&family=Rock+Salt&display=swap');
+
 /* =======================================================
 Root Variables
 =========================================================== */
@@ -29,7 +31,24 @@ Root Variables
   #422062 85%,
   #1a1036 100%
 );
+
+/*Fonts*/
+--font-headings: 'Rock Salt', cursive;
+--font-body: 'Oxanium', sans-serif;
 }
+/* ============================================================
+   Typography
+============================================================ */
+
+body, p, li, a, span {
+  font-family: var(--font-body);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-headings);
+}
+
+
 
 /* ==========================================================
  Glass Background

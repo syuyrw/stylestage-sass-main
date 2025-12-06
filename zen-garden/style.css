@@ -19,13 +19,16 @@ Root Variables
   /*Colors*/
   --color-white: #FFFFFF;   
   --color-black: #000000;   
-  --color-slate: #a47ab3;  
-  --color-yellow: #FFF949; 
-  --color-pink: #ff6ec;    
+  --color-yellow: #ffe289; 
+  --color-pink: #ff6ec7; 
+  --color-Purple: #422062;
+
+
+
 --gradient: radial-gradient(
   circle at bottom center,
   #ffe289 0%,
-  #ff9b4a 5%,
+  #d94a4a 5%,
   #ff6ec7 15%,
   #a47ab3 25%,
   #422062 85%,
@@ -46,6 +49,34 @@ body, p, li, a, span {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--font-headings);
+}
+/* Headings */
+h1 {
+  color: var(--color-yellow); 
+}
+
+h2 {
+  color: var(--color-white)
+}
+
+h3,h4 {
+   color: var(--color-Purple)
+}
+
+p strong,
+p b {
+  color: var(--color-yellow);
+}
+
+p a:hover,
+li a:hover {
+  color:var(--color-pink);
+}
+
+/* Links */
+p a,
+li a {
+  color: var(--color-yellow);
 }
 
 
@@ -224,3 +255,5 @@ body::before {
     transparent 10vh
   );
 }
+
+

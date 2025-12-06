@@ -65,17 +65,14 @@ h3,h4 {
    color: var(--color-Purple)
 }
 
-p strong,
-p b {
-  color: var(--color-yellow);
-}
 
+/*Links*/
 p a:hover,
 li a:hover {
   color:var(--color-pink);
 }
 
-/*Links*/
+
 .intro p a,
 .preamble p a,
 .summary p a,

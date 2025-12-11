@@ -1,80 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&family=Rock+Salt&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Oxanium:wght@300;400;500;600;700&family=Rock+Salt&display=swap");
 
 /* =======================================================
 Root Variables
 =========================================================== */
 :root {
     /*Glass effect*/
-  --glassEffect-bg: rgba(255, 255, 255, 0.05);
-  --glassEffect-border: rgba(255, 255, 255, 0.3);
-  --glassEffect-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  --glassEffect-radius: 12px;
- 
+    --glassEffect-bg: rgba(255, 255, 255, 0.05);
+    --glassEffect-border: rgba(255, 255, 255, 0.3);
+    --glassEffect-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    --glassEffect-radius: 12px;
 
-  --glassEffect-shine-1: rgba(255, 255, 255, 0);
-  --glassEffect-shine-2: rgba(255, 255, 255, 0.35);
-  --glassEffect-shine-3: rgba(255, 255, 255, 0.15);
-  --glassEffect-shine-angle: -20deg;
+    --glassEffect-shine-1: rgba(255, 255, 255, 0);
+    --glassEffect-shine-2: rgba(255, 255, 255, 0.35);
+    --glassEffect-shine-3: rgba(255, 255, 255, 0.15);
+    --glassEffect-shine-angle: -20deg;
 
-  /*Colors*/
-  --color-white: #FFFFFF;   
-  --color-black: #000000;   
-  --color-yellow: #ffe289; 
-  --color-pink: #ff6ec7; 
-  --color-Purple: #422062;
-   --color-red: #d94a4a;
+    /*Colors*/
+    --color-white: #ffffff;
+    --color-black: #000000;
+    --color-yellow: #ffe289;
+    --color-pink: #ff6ec7;
+    --color-Purple: #422062;
+    --color-red: #d94a4a;
 
+    --gradient: radial-gradient(
+        circle at bottom center,
+        #ffe289 0%,
+        #d94a4a 5%,
+        #ff6ec7 15%,
+        #a47ab3 25%,
+        #422062 85%,
+        #1a1036 100%
+    );
 
-
-
---gradient: radial-gradient(
-  circle at bottom center,
-  #ffe289 0%,
-  #d94a4a 5%,
-  #ff6ec7 15%,
-  #a47ab3 25%,
-  #422062 85%,
-  #1a1036 100%
-);
-
-/*Fonts*/
---font-headings: 'Rock Salt', cursive;
---font-body: 'Oxanium', sans-serif;
+    /*Fonts*/
+    --font-headings: "Rock Salt", cursive;
+    --font-body: "Oxanium", sans-serif;
 }
 /* ============================================================
    Typography
 ============================================================ */
 
-body, p, li, a, span {
-  font-family: var(--font-body);
+html,
+body {
+    height: 100%;
+}
+
+body,
+p,
+li,
+a,
+span {
+    font-family: var(--font-body);
 }
 
 /* Headings */
-h1, h2, h3, h4, h5, h6 {
-  font-family: var(--font-headings);
-  padding-left: 15px;
-  padding-right: 15px;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--font-headings);
+    padding-left: 15px;
+    padding-right: 15px;
 }
 
 h1 {
-  color: var(--color-yellow); 
+    color: var(--color-yellow);
 }
 
 h2 {
-  color: var(--color-white)
+    color: var(--color-white);
 }
 
 h3 {
-  font-size: 20px;
+    font-size: 20px;
 }
 
-h3,h4 {
-   color: var(--color-Purple)
+h3,
+h4 {
+    color: var(--color-Purple);
 }
 
 p {
-  text-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.35);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
     padding-left: 15px;
     padding-right: 15px;
     font-size: 20px;
@@ -83,39 +93,35 @@ p {
 /*Links*/
 p a:hover,
 li a:hover {
-  color:var(--color-pink);
+    color: var(--color-pink);
 }
-
 
 .intro p a,
 .preamble p a,
 .summary p a,
 .main p a,
 .sidebar li a {
-  color: var(--color-red);
-   text-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.35);
+    color: var(--color-red);
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.35);
 }
 
-
-
 section {
-  margin: 20px 0;
+    margin: 20px 0;
 }
 
 div {
-  margin: 10px 10px;
+    margin: 10px 10px;
 }
 
 .intro {
-  grid-column: 1 / -1;
-  grid-row: 1;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-column: 1 / -1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
 }
 
 header {
-  grid-column: 1 / 3;
+    grid-column: 1 / 3;
 }
 
 /* body {
@@ -125,102 +131,100 @@ header {
 } */
 
 .page-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
 }
 
 .summary {
-  grid-column: 3/-1;
+    grid-column: 3/-1;
 }
 
 .preamble {
-  grid-column: 2/6;
-  grid-row: 3/4;
+    grid-column: 2/6;
+    grid-row: 3/4;
 }
 
 .sidebar {
-  grid-column: 1 / 4;
-  grid-row: 2/3;
-  text-align: center;
+    grid-column: 1 / 4;
+    grid-row: 2/3;
+    text-align: center;
 }
 
 .wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
 }
 
 .design-selection {
-  grid-column: 2/4;
+    grid-column: 2/4;
 }
 
 .design-archives {
-  grid-row: 2/3;
-  grid-column: 2/3;
+    grid-row: 2/3;
+    grid-column: 2/3;
 }
 
 .zen-resources {
-  grid-row: 2/3;
-  grid-column: 3/4;
+    grid-row: 2/3;
+    grid-column: 3/4;
 }
 
 ul {
-  list-style-type: none;
+    list-style-type: none;
 }
 
 #zen-supporting {
-  grid-column: 1/4;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-  margin: 20px 0;
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    margin: 20px 0;
 }
 
 .explanation {
-  grid-column: 1/-1;
+    grid-column: 1/-1;
 }
 
 .participation {
-  text-align: right;
-  grid-row: 3/4;
-  grid-column: 4/7;
-
+    text-align: right;
+    grid-row: 3/4;
+    grid-column: 4/7;
 }
 
 .benefits {
-  text-align: left;
-  grid-column: 1/4;
-  grid-row: 3/4;
+    text-align: left;
+    grid-column: 1/4;
+    grid-row: 3/4;
 }
 
 .requirements {
-  grid-column: 2/6;
-  grid-row: 2/3;
-  text-align: center
+    grid-column: 2/6;
+    grid-row: 2/3;
+    text-align: center;
 }
 
 footer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 70px;
-  grid-row: 4/5;
-  grid-column: 1/-1;
-  text-align: center;
-  font-size: 30px;
-  background-color: black;
-  border-bottom-right-radius: 15px;
-  border-bottom-left-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    grid-row: 4/5;
+    grid-column: 1/-1;
+    text-align: center;
+    font-size: 30px;
+    background-color: black;
+    border-bottom-right-radius: 15px;
+    border-bottom-left-radius: 15px;
 }
 
 footer a:link {
-  color: white;
-  padding: 10px;
+    color: white;
+    padding: 10px;
 }
 
 footer a:visited {
-  color: white;
+    color: white;
 }
-
 
 /* ==========================================================
  Glass Background
@@ -244,157 +248,172 @@ footer a:visited {
 .extra4,
 .extra5,
 .extra6 {
-  
-  /*glass background */
-  background: var(--glassEffect-bg);
+    /*glass background */
+    background: var(--glassEffect-bg);
 
-  /* Subtle shine highlight */
-  background-image:
-    linear-gradient(
-      var(--glassEffect-shine-angle),
-      var(--glassEffect-shine-1) 0%,
-      var(--glassEffect-shine-2) 50%,
-      var(--glassEffect-shine-3) 100%
+    /* Subtle shine highlight */
+    background-image: linear-gradient(
+        var(--glassEffect-shine-angle),
+        var(--glassEffect-shine-1) 0%,
+        var(--glassEffect-shine-2) 50%,
+        var(--glassEffect-shine-3) 100%
     );
 
-  border: 1px solid var(--glassEffect-border);
+    border: 1px solid var(--glassEffect-border);
 
-
-  box-shadow: var(--glassEffect-shadow);
-  border-radius: var(--glassEffect-radius);
-
-
-
+    box-shadow: var(--glassEffect-shadow);
+    border-radius: var(--glassEffect-radius);
 }
 .intro a,
 .preamble a,
 .summary a,
 .main a,
 .sidebar a {
-  color: #000;
+    color: #000;
 }
-
 
 /*==============================================================
 Draw City
 ==============================================================*/
 body {
-  background-image: var(--gradient);
-  background-size: 100% 100vh;   
-  background-repeat: no-repeat;
-  background-attachment: fixed; 
-  margin: 0;
-  min-height: 100vh;
+    background-image: var(--gradient);
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
 }
 
 /* City silhouette using layered gradients */
 body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  z-index: -1;
-  pointer-events: none;
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
     transform: translateX(6%);
 
-  background:
+    background:
 
   /* ============================================================
      WINDOWS
   ============================================================ */
 
-/* Left building windows*/
-  repeating-linear-gradient(
-    to bottom,
-    var(--color-yellow) 0 6px,
-    var(--color-yellow) 6px 12px,
-    transparent 12px 26px
-  ) no-repeat 18.5% 100% / 4% 50vh,
-
-  /* Center tower windows*/
-  repeating-linear-gradient(
-    to bottom,
-    var(--color-yellow) 0 6px,
-    var(--color-yellow) 6px 12px,
-    transparent 12px 26px
-  ) no-repeat 41% 100% / 5% 65vh,
-
-  /* Right mid building windows*/
-  repeating-linear-gradient(
-    to bottom,
-    var(--color-yellow) 0 6px,
-    var(--color-yellow) 6px 12px,
-    transparent 12px 26px
-  ) no-repeat 63.5% 100% / 4% 48vh,
-
-  /* Far right windows*/
-  repeating-linear-gradient(
-    to bottom,
-    var(--color-yellow) 0 6px,
-    var(--color-yellow) 6px 12px,
-    transparent 12px 26px
-  ) no-repeat 78.5% 100% / 4% 44vh,
-
-  /* Far-left building windows */
-  repeating-linear-gradient(
-    to bottom,
-    var(--color-yellow) 0 6px,
-    var(--color-yellow) 6px 12px,
-    transparent 12px 26px
-  ) no-repeat 11.5% 100% / 3% 45vh,
-
-
-  /* ============================================================
+/* Left building windows*/ repeating-linear-gradient(
+                to bottom,
+                var(--color-yellow) 0 6px,
+                var(--color-yellow) 6px 12px,
+                transparent 12px 26px
+            )
+            no-repeat 18.5% 100% / 4% 50vh,
+        /* Center tower windows*/
+            repeating-linear-gradient(
+                to bottom,
+                var(--color-yellow) 0 6px,
+                var(--color-yellow) 6px 12px,
+                transparent 12px 26px
+            )
+            no-repeat 41% 100% / 5% 65vh,
+        /* Right mid building windows*/
+            repeating-linear-gradient(
+                to bottom,
+                var(--color-yellow) 0 6px,
+                var(--color-yellow) 6px 12px,
+                transparent 12px 26px
+            )
+            no-repeat 63.5% 100% / 4% 48vh,
+        /* Far right windows*/
+            repeating-linear-gradient(
+                to bottom,
+                var(--color-yellow) 0 6px,
+                var(--color-yellow) 6px 12px,
+                transparent 12px 26px
+            )
+            no-repeat 78.5% 100% / 4% 44vh,
+        /* Far-left building windows */
+            repeating-linear-gradient(
+                to bottom,
+                var(--color-yellow) 0 6px,
+                var(--color-yellow) 6px 12px,
+                transparent 12px 26px
+            )
+            no-repeat 11.5% 100% / 3% 45vh,
+        /* ============================================================
      BUILDINGS
   ============================================================ */
-
-  /* Left tall block */
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 16% 100% / 10% 54vh,
-
-  /* Slim block next to it */
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 28% 100% / 6% 46vh,
-
-  /* Center main tower */
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 40% 100% / 12% 70vh,
-
-  /* Tower tier steps */
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 40.5% calc(100% - 70vh) / 10% 4vh,
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 41% calc(100% - 74vh) / 8% 4vh,
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 41% calc(100% - 78vh) / 6% 4vh,
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 41.25% calc(100% - 82vh) / 4% 4vh,
-
-  /* Center spire */
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 41.5% calc(100% - 86vh) / 1% 15vh,
-
-  /* Right mid building */
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 64% 100% / 8% 50vh,
-
-  /* Far right block */
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 80% 100% / 9% 44vh,
-
-      /* Far-left building */
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 8% 100% / 8% 45vh,
-
-  /* Mid-right new building (between tower & right block) */
-  linear-gradient(var(--color-black), var(--color-black))
-    no-repeat 52% 100% / 7% 56vh,
-
-  /* Ground */
-  linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.18) 0 20vh,
-    transparent 10vh
-  );
+            /* Left tall block */
+            linear-gradient(var(--color-black), var(--color-black)) no-repeat
+            16% 100% / 10% 54vh,
+        /* Slim block next to it */
+            linear-gradient(var(--color-black), var(--color-black)) no-repeat
+            28% 100% / 6% 46vh,
+        /* Center main tower */
+            linear-gradient(var(--color-black), var(--color-black)) no-repeat
+            40% 100% / 12% 70vh,
+        /* Tower tier steps */
+            linear-gradient(var(--color-black), var(--color-black)) no-repeat
+            40.5% calc(100% - 70vh) / 10% 4vh,
+        linear-gradient(var(--color-black), var(--color-black)) no-repeat 41%
+            calc(100% - 74vh) / 8% 4vh,
+        linear-gradient(var(--color-black), var(--color-black)) no-repeat 41%
+            calc(100% - 78vh) / 6% 4vh,
+        linear-gradient(var(--color-black), var(--color-black)) no-repeat 41.25%
+            calc(100% - 82vh) / 4% 4vh,
+        /* Center spire */
+            linear-gradient(var(--color-black), var(--color-black)) no-repeat
+            41.5% calc(100% - 86vh) / 1% 15vh,
+        /* Right mid building */
+            linear-gradient(var(--color-black), var(--color-black)) no-repeat
+            64% 100% / 8% 50vh,
+        /* Far right block */
+            linear-gradient(var(--color-black), var(--color-black)) no-repeat
+            80% 100% / 9% 44vh,
+        /* Far-left building */
+            linear-gradient(var(--color-black), var(--color-black)) no-repeat 8%
+            100% / 8% 45vh,
+        /* Mid-right new building (between tower & right block) */
+            linear-gradient(var(--color-black), var(--color-black)) no-repeat
+            52% 100% / 7% 56vh,
+        /* Ground */
+            linear-gradient(
+                to top,
+                rgba(0, 0, 0, 0.18) 0 20vh,
+                transparent 10vh
+            );
 }
 
+@media screen and (max-width: 700px) {
+    .intro,
+    .page-wrapper,
+    #zen-supporting,
+    .wrapper {
+        display: block;
+    }
 
+    body {
+        margin: 0;
+        min-height: 100vh;
+        padding-bottom: 80px; /* >= footer height */
+    }
+
+    footer {
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        height: 70px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        font-size: 30px;
+        background-color: black;
+
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+        margin-top: 0; /* override previous margin-top:auto */
+        grid-row: auto; /* grid hints no longer relevant */
+        grid-column: auto;
+    }
+}
